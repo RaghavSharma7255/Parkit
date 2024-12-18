@@ -3,38 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Our App</title>
-    <style>
-        /* Style the buttons */
-        .button {
-            background-color: #4CAF50; /* Green */
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <meta name="description" content="Parkit App - A smart parking solution">
+    <title>Parkit App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to Our App</h1>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <p>Thank you for using our app. Please select one of the options below:</p>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h1>Welcome to Parkit</h1>
+            <p>Your smart parking solution. Find available parking spots easily.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.example.parkit" class="btn" target="_blank">Download Now on Google Play</a>
+        </div>
+    </section>
 
-    <!-- Button for Privacy Policy -->
-    <a href="https://raghavsharma7255.github.io/Parkit/privacy-policy/privacy-policy" class="button">Privacy Policy</a>
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="feature-list">
+                <div class="feature">
+                    <h3>Real-time Availability</h3>
+                    <p>Get real-time information about available parking spots near you.</p>
+                </div>
+                <div class="feature">
+                    <h3>Easy Navigation</h3>
+                    <p>Navigate seamlessly to your reserved parking spot with step-by-step directions.</p>
+                </div>
+                <div class="feature">
+                    <h3>Reserve Parking</h3>
+                    <p>Reserve parking ahead of time to ensure you have a spot when you arrive.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Button for Account Deletion Request -->
-    <a href="https://raghavsharma7255.github.io/Parkit/account-delete/account-delete" class="button">Request Account Deletion</a>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Parkit. All rights reserved. <br> <a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
 
+    <script src="scripts.js"></script>
 </body>
 </html>
