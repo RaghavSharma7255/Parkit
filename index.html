@@ -12,47 +12,69 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="https://raghavsharma7255.github.io/Parkit/privacy-policy/privacy-policy">Privacy Policy</a></li>
+                <li><a href="#" id="home-link">Home</a></li>
+                <li><a href="#" id="privacy-policy-link">Privacy Policy</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <h1>Welcome to Parkit</h1>
-            <p>Your smart parking solution. Find available parking spots easily.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.example.parkit" class="btn" target="_blank">Download Now on Google Play</a>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <main id="content">
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <h1>Welcome to Parkit</h1>
+                <p>Your smart parking solution. Find available parking spots easily.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.example.parkit" class="btn" target="_blank">Download Now on Google Play</a>
+            </div>
+        </section>
 
-    <!-- Features Section -->
-    <section id="features">
-        <div class="container">
-            <h2>Features</h2>
-            <div class="feature-list">
-                <div class="feature">
-                    <h3>Real-time Availability</h3>
-                    <p>Get real-time information about available parking spots near you.</p>
-                </div>
-                <div class="feature">
-                    <h3>Easy Navigation</h3>
-                    <p>Navigate seamlessly to your reserved parking spot with step-by-step directions.</p>
-                </div>
-                <div class="feature">
-                    <h3>Reserve Parking</h3>
-                    <p>Reserve parking ahead of time to ensure you have a spot when you arrive.</p>
+        <!-- Features Section -->
+        <section id="features">
+            <div class="container">
+                <h2>Features</h2>
+                <div class="feature-list">
+                    <div class="feature">
+                        <h3>Real-time Availability</h3>
+                        <p>Get real-time information about available parking spots near you.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Easy Navigation</h3>
+                        <p>Navigate seamlessly to your reserved parking spot with step-by-step directions.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Reserve Parking</h3>
+                        <p>Reserve parking ahead of time to ensure you have a spot when you arrive.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Parkit. All rights reserved. <br> <a href="privacy-policy.html">Privacy Policy</a></p>
+        <p>&copy; 2024 Parkit. All rights reserved.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script>
+        // JavaScript for dynamically loading the privacy policy
+        document.getElementById('privacy-policy-link').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default link behavior
+            fetch('privacy-policy/privacy-policy.html') // Updated path
+                .then(response => {
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById('content').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading Privacy Policy:', error));
+        });
+
+        document.getElementById('home-link').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default link behavior
+            location.reload(); // Reload the page to display the homepage content
+        });
+    </script>
 </body>
 </html>
